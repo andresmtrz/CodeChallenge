@@ -15,5 +15,7 @@ boton.addEventListener('click',()=>{
         headers: {
             "Content-type": "Application/json; charset=UTF-8"
         }
-    }).then(response => response.json()).then(json => console.log(json))
+    }).then((response) => {
+        console.log(response);
+        return response.json()}).then(json => console.log(json))
 })
